@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseball Game</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="main__title font-center">
+        <h1>야구 게임</h1>
+        <button class="btn explain-btn">설명</button>
+    </div>
+    <main>
+        <div class="main__gamebtns">
+            <a href="easy.html" class="main__gamebtn">쉬움</a>
+            <a href="normal.html" class="main__gamebtn">보통</a>
+            <a href="#" class="main__gamebtn">어려움</a>
+            <a href="#" class="main__gamebtn">매우 어려움</a>
+        </div>
+        <div class="main__gamescores">
+            <table>
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>romina</td>
+                        <td>57</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>ahyo</td>
+                        <td>46</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div class="explain__modal-overlay"><!--캐러셀 슬라이더 사용한 게임방법 설명-->
+        <div class="explain__modal">
+            <div class="explain-content">랜덤 숫자가 결정돼요. 중복없고 0~9사이의 숫자고 난이도마다 맞춰야 할 숫자 개수가 달라요</div>
+            <div class="explain-content">숫자와 위치가 다 맞으면 스트라이크, 숫자만 맞고 위치가 다르면 볼이에요</div>
+            <div class="explain-content">시도할때마다 점수가 떨어져요, 적은 시도로 맞춰야 고득점을 할 수 있어요</div>
+        </div>
+        <div class="explain__modal_btns">
+            <div class="modal_left modal_btn"><i class="fas fa-chevron-left"></i></div>
+            <div class="modal_right modal_btn"><i class="fas fa-chevron-right"></i></div>
+            <div class="modal_close modal_btn"><i class="far fa-times-circle"></i></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__info">Made by SONGHA KIM</div>
+        <div class="footer__share">
+            <div class="share__btn kakao">
+                <img src="img/kakao_logo.jpg" />
+            </div>
+            <div class="share__btn link"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg></div>
+        </div>
+        
+    </footer>
+    <script src="https://kit.fontawesome.com/6c2f90a09b.js" crossorigin="anonymous"></script>
+</body>
+</html>

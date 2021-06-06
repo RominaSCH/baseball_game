@@ -1,0 +1,36 @@
+@import "variables.css";
+ 
+@import "component/footer.css";
+@import "component/score.css";
+@import "component/explain.css";
+
+@import "screen/home.css";
+
+@font-face {
+    font-family: "nanumroundR";
+    src: url(font/NanumSquareRoundR.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: nanumroundR;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.btn{
+    outline: 0;
+    border:0;
+    padding: 8px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.font-center{
+    text-align: center;
+}
+a, a:visited{
+    text-decoration: none;
+    color: #000;
+}

@@ -1,0 +1,22 @@
+footer{
+    width: 100%;
+    padding: 20px;
+    background-color: var(--couple-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+.footer__share{
+    display: flex;
+}
+.share__btn{
+    cursor: pointer;
+}
+.kakao > img,
+.link > svg{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
