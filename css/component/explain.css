@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* display: none; */
+    display: none;
 }
 .explain__modal{
     z-index: 2;
@@ -19,8 +19,6 @@
     border-radius: 10px;
     padding:20px;
     position: relative;
-    display: ;
-    /* overflow: hidden; */
 }
 .explain-content{
     z-index: 1;
@@ -30,7 +28,7 @@
     background-color: var(--basic-color);
     border-radius: 10px;
     padding:20px;
-    float: right;
+    float: right
 }
 .modal_btn{
     border:0;

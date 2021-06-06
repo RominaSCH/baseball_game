@@ -1,0 +1,22 @@
+.result{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: relative;
+}
+.result__sb{
+    display: flex;
+    /* display: none; */
+}
+.result__strike{
+    margin-right: 20px;
+}
+.result__out{
+    position: absolute;
+    top: 0;
+    color: tomato;
+    display: none;
+}

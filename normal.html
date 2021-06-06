@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NORMAL</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav__btns">
+            <div class="nav__btns--back"><i class="fas fa-arrow-left"></i></div>
+            <div class="nav__btns--retry"><i class="fas fa-undo"></i></div>
+        </div>
+        <div class="nav__score">
+            <div class="nav__score--text">Score</div>
+            <div class="nav__score--number">40</div>
+        </div>
+    </nav>
+    <form action="">
+        <input type="text" minlength="4" maxlength="4" placeholder="0000" id="normal__number" required/>
+        <button class="try_btn btn">TRY</button>
+    </form>
+    <div class="result">
+        <div class="result__sb">
+            <div class="result__strike">
+                <h2><span class="result__s--num"></span>S</h2>
+            </div>
+            <div class="result__ball">
+                <h2><span class="result__b--num"></span>B</h2>
+            </div>
+        </div>
+        <div class="result__out">
+            <h2><span class="result__out--text">OUT</span></h2>
+        </div>
+    </div>
+    <!-- buttons are for only mobile.-->
+    <!-- <div class="number__buttons"> 
+        <div class="number__button">0</div>
+        <div class="number__button">1</div>
+        <div class="number__button">2</div>
+        <div class="number__button">3</div>
+        <div class="number__button">4</div>
+        <div class="number__button">5</div>
+        <div class="number__button">6</div>
+        <div class="number__button">7</div>
+        <div class="number__button">8</div>
+        <div class="number__button">9</div>
+    </div> -->
+    <script src="https://kit.fontawesome.com/6c2f90a09b.js" crossorigin="anonymous"></script>
+    <script src="js/normal.js"></script>
+</body>
+</html>

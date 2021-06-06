@@ -1,0 +1,29 @@
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 10px;
+}
+#normal__number{
+    outline: 0;
+    border: 0;
+    width: 250px;
+    padding: 20px 30px;
+    text-align: center;
+    font-size: 55px;
+    background-color: var(--basic-color);
+    border-radius: 10px;
+    letter-spacing: 10px;
+}
+.try_btn{
+    margin-top: 15px;
+    font-size: 25px;
+    padding: 12px 18px;
+    transition: .2s ease-in-out;
+}
+.try_btn:hover,
+.try_btn:active{
+    background-color: var(--couple-color);
+    color: #fff;
+}

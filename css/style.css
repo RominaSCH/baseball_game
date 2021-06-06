@@ -3,8 +3,11 @@
 @import "component/footer.css";
 @import "component/score.css";
 @import "component/explain.css";
+@import "component/nav.css";
+@import "component/result.css";
 
 @import "screen/home.css";
+@import "screen/normal.css";
 
 @font-face {
     font-family: "nanumroundR";
