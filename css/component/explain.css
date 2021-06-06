@@ -13,18 +13,24 @@
 }
 .explain__modal{
     z-index: 2;
-    width: 400px;
-    height: 400px;
-    background-color: var(--basic-color);
+    width: 360px;
+    height: 360px;
+    /* background-color: var(--basic-color); */
     border-radius: 10px;
     padding:20px;
     position: relative;
-    display: flex;
-    overflow: hidden;
+    display: ;
+    /* overflow: hidden; */
 }
 .explain-content{
-    width: 400px;
-    height: 400px;
+    z-index: 1;
+    position: relative;
+    width: 360px;
+    height: 360px;
+    background-color: var(--basic-color);
+    border-radius: 10px;
+    padding:20px;
+    float: right;
 }
 .modal_btn{
     border:0;
