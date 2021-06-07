@@ -25,7 +25,7 @@ function numberMaker(){ //문제 숫자 배열 만들기
 
 tryBtn.addEventListener("click", (e) => {
   e.preventDefault();
-    score -= 3;
+    
     document.querySelector(".nav__score--number").innerHTML = score;
 
   const inputAnswer = [];
@@ -40,6 +40,7 @@ tryBtn.addEventListener("click", (e) => {
 
 
 function compareNum(answer, input){
+    score -=4;
     let ball = 0;
     let strike = 0;
     for(i=0;i<6;i++){
@@ -68,6 +69,7 @@ function compareNum(answer, input){
     document.querySelector(".result__s--num").innerHTML = strike;
     document.querySelector(".result__b--num").innerHTML = ball;
     if(strike === 6){
+        score += 4;
         console.log("WIN!!!");
         document.querySelector(".win-modal__score").innerHTML = score;
         document.querySelector(".win-modal-overlay").style.display = "flex";
