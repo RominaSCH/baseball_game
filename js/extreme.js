@@ -63,6 +63,7 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
             } else {
                 score -= 8;
             }
+            wrong();
             resultSB.style.display = "none";
             resultOut.style.display = "block";
         } else { //0S 1~4B
@@ -71,6 +72,7 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
             } else {
                 score -= 8;
             }
+            wrong();
             resultSB.style.display = "flex";
             resultOut.style.display = "none";
         }
@@ -80,13 +82,14 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
         } else {
             score -= 8;
         }
+        wrong();
         resultSB.style.display = "flex";
         resultOut.style.display = "none";
     }
     navScore.innerHTML = score;
     document.querySelector(".result__s--num").innerHTML = strike;
     document.querySelector(".result__b--num").innerHTML = ball;
-    if (strike === 5) {
+    if (strike === 6) {
         if (tryTimes > 5) {
             score += 8;
             navScore.innerHTML = score;
@@ -103,6 +106,16 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
     }
 }
 
+function wrong() {
+    inputValue.style.background = "tomato";
+    inputValue.style.color = "#fff";
+    inputValue.style.animation = "shake 1s ease-in-out";
+    setTimeout(() => {
+        inputValue.style.background = "var(--basic-color)";
+        inputValue.style.color = "#000";
+        inputValue.style.animation = "none";
+    }, 1500);
+}
 
 document.querySelector(".delete_btn").addEventListener("click", (e) => {
     e.preventDefault();
