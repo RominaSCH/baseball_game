@@ -37,3 +37,17 @@ body{
 a, a:visited{
     text-decoration: none;
 }
+@keyframes shake{
+    0%{
+        transform: translateY(5px);
+    }
+    33%{
+        transform: translateY(-5px);
+    }
+    66%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+}
