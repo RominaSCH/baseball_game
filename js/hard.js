@@ -1,8 +1,8 @@
 const tryBtn = document.querySelector(".try_btn");
-const inputValue = document.querySelector("#normal__number");
+const inputValue = document.querySelector("#hard__number");
 
 let answerArray = [];
-let score = 40;
+let score = 80;
 
 function init(){
     answerArray = numberMaker();
@@ -13,7 +13,7 @@ function numberMaker(){ //문제 숫자 배열 만들기
     let answerNum = [];
     let numbers = [0,1,2,3,4,5,6,7,8,9];
     let maked = 0;
-    while(maked < 4){
+    while(maked < 5){
         let randomNumber = Math.floor(Math.random()*(numbers.length));
         answerNum.push(numbers[randomNumber]);
         numbers.splice(randomNumber,1);
@@ -25,12 +25,12 @@ function numberMaker(){ //문제 숫자 배열 만들기
 
 tryBtn.addEventListener("click", (e) => {
   e.preventDefault();
-    score -= 2;
+    score -= 3;
     document.querySelector(".nav__score--number").innerHTML = score;
 
   const inputAnswer = [];
   const inputString = inputValue.value.split("");
-  for(i=0;i<4;i++){
+  for(i=0;i<5;i++){
     inputAnswer.push(parseInt(inputString[i]));
   }
   console.log(inputAnswer);
@@ -42,7 +42,7 @@ tryBtn.addEventListener("click", (e) => {
 function compareNum(answer, input){
     let ball = 0;
     let strike = 0;
-    for(i=0;i<4;i++){
+    for(i=0;i<5;i++){
         if(answer.includes(input[i])){
             if(input[i] === answer[i]){
                 strike += 1;
@@ -67,7 +67,7 @@ function compareNum(answer, input){
     }
     document.querySelector(".result__s--num").innerHTML = strike;
     document.querySelector(".result__b--num").innerHTML = ball;
-    if(strike === 4){
+    if(strike === 5){
         console.log("WIN!!!");
         document.querySelector(".win-modal__score").innerHTML = score;
         document.querySelector(".win-modal-overlay").style.display = "flex";

@@ -8,8 +8,64 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <nav>
+        <div class="nav__btns">
+            <div class="nav__btns--back"><a href="index.html"><i class="fas fa-chevron-left"></i></a></div>
+            <div onclick="window.location.reload()" class="nav__btns--retry"><i class="fas fa-undo"></i></div>
+        </div>
+        <div class="nav__score">
+            <div class="nav__score--text">Score</div>
+            <div class="nav__score--number">100</div>
+        </div>
+    </nav>
+    <form>
+        <input type="text" minlength="6" maxlength="6" placeholder="000000" id="extreme__number" required/>
+        <div class="form-btns">
+            <button class="try_btn btn">맞춰보기</button>
+            <button class="delete_btn btn">지우기</button>
+        </div>
+    </form>
+    <div class="result">
+        <div class="result__sb">
+            <div class="result__strike">
+                <h2><span class="result__s--num"></span>S</h2>
+            </div>
+            <div class="result__ball">
+                <h2><span class="result__b--num"></span>B</h2>
+            </div>
+        </div>
+        <div class="result__out">
+            <h2><span class="result__out--text">OUT</span></h2>
+        </div>
+    </div>
+    <!-- buttons are for only mobile.-->
+    <!-- <div class="number__buttons"> 
+        <div class="number__button">0</div>
+        <div class="number__button">1</div>
+        <div class="number__button">2</div>
+        <div class="number__button">3</div>
+        <div class="number__button">4</div>
+        <div class="number__button">5</div>
+        <div class="number__button">6</div>
+        <div class="number__button">7</div>
+        <div class="number__button">8</div>
+        <div class="number__button">9</div>
+    </div> -->
 
+    <div class="win-modal-overlay">
+        <div class="win-modal"> <!--cat api로 사진을 넣어볼까...-->
+            <img src="img/cele.jpg"/>
+            <h1>축하합니다! <br/>당신이 이겼습니다!</h1>
+            <h3>당신의 점수는 <span class="win-modal__score"></span>점 입니다.</h3>
+            <p>당신의 점수를 기록하시겠습니까?</p>
+            <input type="text" minlength="1" maxlength="10" placeholder="NAME" />
+            <div class="win-modal__btns">
+                <a href="index.html" class="">다른 난이도 선택하기</a href="index.html">
+                <button onclick="window.location.reload()" class="btn">다시 하기</button>
+            </div>
+        </div>
+    </div>
     <script src="https://kit.fontawesome.com/6c2f90a09b.js" crossorigin="anonymous"></script>
-    <script src="js/normal.js"></script>
+    <script src="js/extreme.js"></script>
 </body>
 </html>

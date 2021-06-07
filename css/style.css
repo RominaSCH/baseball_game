@@ -5,6 +5,7 @@
 @import "component/explain.css";
 @import "component/nav.css";
 @import "component/result.css";
+@import "component/winModal.css";
 
 @import "screen/home.css";
 @import "screen/normal.css";
@@ -35,5 +36,4 @@ body{
 }
 a, a:visited{
     text-decoration: none;
-    color: #000;
 }

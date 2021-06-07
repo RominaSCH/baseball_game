@@ -15,6 +15,9 @@ nav{
     color: rgba(255,255,255,.6);
     cursor: pointer;
 }
+.nav__btns--back > a, .nav__btns--back > a:visited{
+    color: rgba(255,255,255,.6);
+}
 .nav__btns--back,
 .nav__btns--retry{
     transition: .2s ease-in-out;

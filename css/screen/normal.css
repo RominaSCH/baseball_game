@@ -5,10 +5,13 @@ form{
     align-items: center;
     margin: 30px 0 10px;
 }
-#normal__number{
+#easy__number,
+#normal__number,
+#hard__number,
+#extreme__number{
     outline: 0;
     border: 0;
-    width: 250px;
+    width: 200px;
     padding: 20px 30px;
     text-align: center;
     font-size: 55px;
@@ -16,7 +19,17 @@ form{
     border-radius: 10px;
     letter-spacing: 10px;
 }
-.try_btn{
+#normal__number{
+    width: 250px;
+}
+#hard__number{
+    width: 300px;
+}
+#extreme__number{
+    width: 350px;
+}
+.try_btn,
+.delete_btn{
     margin-top: 15px;
     font-size: 25px;
     padding: 12px 18px;
@@ -25,5 +38,10 @@ form{
 .try_btn:hover,
 .try_btn:active{
     background-color: var(--couple-color);
+    color: #fff;
+}
+.delete_btn:hover,
+.delete_btn:active{
+    background-color: tomato;
     color: #fff;
 }
