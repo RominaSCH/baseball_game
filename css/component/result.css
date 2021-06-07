@@ -10,6 +10,8 @@
 .result__sb{
     display: flex;
     /* display: none; */
+    position: absolute;
+    top: 0;
 }
 .result__strike{
     margin-right: 20px;
