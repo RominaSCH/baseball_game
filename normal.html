@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NORMAL</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
         <div class="nav__btns">
-            <div class="nav__btns--back"><a href="index.html"><i class="fas fa-chevron-left"></i></a></div>
+            <div onclick="window.history.back()" class="nav__btns--back"><i class="fas fa-chevron-left"></i></div>
             <div onclick="window.location.reload()" class="nav__btns--retry"><i class="fas fa-undo"></i></div>
         </div>
         <div class="nav__score">
@@ -21,8 +23,8 @@
     <form>
         <input type="text" minlength="4" maxlength="4" placeholder="0000" id="normal__number" required value=""/>
         <div class="form-btns">
-            <button class="try_btn btn">맞춰보기</button>
-            <button class="delete_btn btn">지우기</button>
+            <button class="try_btn btn">TRY</button>
+            <button class="delete_btn btn">DELETE</button>
         </div>
     </form>
     <div class="result">
@@ -70,13 +72,14 @@
     <div class="win-modal-overlay">
         <div class="win-modal"> <!--cat api로 사진을 넣어볼까...-->
             <img src="img/cele.jpg"/>
-            <h1>축하합니다! <br/>당신이 이겼습니다!</h1>
-            <h3>당신의 점수는 <span class="win-modal__score"></span>점 입니다.</h3>
-            <p>당신의 점수를 기록하시겠습니까?</p>
-            <input type="text" minlength="1" maxlength="10" placeholder="NAME" />
+            <h1>Congraturations! <br/>You Win!</h1>
+            <h3>Your score is <span class="win-modal__score"></span></h3>
+            <p>Do you want to record <br>your score and name?</p>
+            <!-- <p class="small-text">Write your name and select button</p> -->
+            <input id="winRecord" type="text" minlength="1" maxlength="10" placeholder="NAME" />
             <div class="win-modal__btns">
-                <button class="gohome">다른 난이도 선택하기</button>
-                <button class="retry-btn">다시 하기</button>
+                <button onclick="window.history.back()" class="gohome">HOME</button>
+                <button onclick="window.location.reload()" class="retry-btn">RETRY</button>
             </div>
         </div>
     </div>
@@ -86,6 +89,5 @@
     </script>
     <script src="js/normal.js"></script>
     <script src="js/numberBtn.js"></script>
-    <script src="js/history.js"></script>
 </body>
 </html>

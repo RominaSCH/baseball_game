@@ -7,16 +7,18 @@ nav{
     padding: 10px 30px;
     background-color: var(--couple-color);
     color: #fff;
+    font-family: 'Quantico', sans-serif;
 }
 .nav__btns{
     display: flex;
     font-size: 40px;
     justify-content: space-between;
+    align-items: center;
     color: rgba(255,255,255,.6);
     cursor: pointer;
 }
-.nav__btns--back > a, .nav__btns--back > a:visited{
-    color: rgba(255,255,255,.6);
+.nav__btns--retry{
+    font-size: 35px;
 }
 .nav__btns--back,
 .nav__btns--retry{
@@ -25,7 +27,11 @@ nav{
     transition: .2s ease-in-out;
 }
 .nav__btns--back:hover,
-.nav__btns--retry:hover{
+.nav__btns--back:active{
+    color:#fff;
+}
+.nav__btns--retry:hover,
+.nav__btns--retry:active{
     color:#fff;
 }
 .nav__btns--back{
@@ -37,7 +43,6 @@ nav{
     text-align: center;
     justify-content: center;
     font-size: 35px;
-    margin-right: 10px;
 }
 .nav__score--text{
     margin-right: 20px;

@@ -14,7 +14,7 @@
 .explain__modal{
     z-index: 2;
     width: 300px;
-    height: 350px;
+    height: 300px;
     /* background-color: var(--basic-color); */
     border-radius: 10px;
     padding:20px;
@@ -46,7 +46,7 @@
     display: none;
 }
 .explain__modal_btns{
-    margin-top: 300px;
+    margin-top: 290px;
     position: relative;
     display: flex;
     justify-content: space-between;

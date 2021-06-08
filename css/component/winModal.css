@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Quantico', sans-serif;
 }
 .win-modal > img{
     width: 100%;
@@ -28,8 +29,19 @@
     height: auto;
     margin-bottom: 15px;
 }
+.win-modal > h1{
+    font-size: 30px;
+    font-weight: 700;
+}
 .win-modal > h3{
+    font-size: 25px;
     margin: 7px 0;
+}
+.win-modal > p{
+    font-size: 18px;
+}
+.small-text{
+    font-size: 10px;
 }
 .win-modal > input{
     width: 80%;
@@ -58,10 +70,7 @@
 .retry-btn:active{
     background-color: slateblue;
 }
-.small-text{
-    margin: 5px 0;
-    font-size: 12px;
-}
+
 @media screen and (max-width:768px){
     .win-modal{
         width: 90%;

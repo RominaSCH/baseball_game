@@ -12,14 +12,11 @@
 @import "screen/home.css";
 @import "screen/normal.css";
 
-@font-face {
-  font-family: "nanumroundR";
-  src: url(font/NanumSquareRoundR.ttf);
-}
-* {
-  font-family: "nanumroundR", serif;
+*{
+  font-family: 'Quantico', sans-serif;
   box-sizing: border-box;
 }
+
 body {
   width: 100vw;
   height: 130vh;
@@ -90,8 +87,8 @@ a:visited {
     opacity: 1;
   }
 }
-@media screen and (max-width:768px) {
-  body{
+@media screen and (max-width: 768px) {
+  body {
     height: 200vh;
   }
 }

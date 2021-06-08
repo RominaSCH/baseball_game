@@ -1,4 +1,5 @@
 .result{
+    font-family: 'Quantico', sans-serif;
     width: 100%;
     display: flex;
     flex-direction: column;
