@@ -1,7 +1,7 @@
+@import "reset.css";
 @import "variables.css";
 
 @import "component/footer.css";
-@import "component/score.css";
 @import "component/explain.css";
 @import "component/nav.css";
 @import "component/result.css";
@@ -17,14 +17,12 @@
   src: url(font/NanumSquareRoundR.ttf);
 }
 * {
-  padding: 0;
-  margin: 0;
+  font-family: "nanumroundR", serif;
   box-sizing: border-box;
-  font-family: nanumroundR;
 }
 body {
   width: 100vw;
-  height: 250vh;
+  height: 130vh;
   background-color: var(--basic-color);
   position: relative;
 }
@@ -81,14 +79,19 @@ a:visited {
   }
 }
 @keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
   }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@media screen and (max-width:768px) {
+  body{
+    height: 200vh;
+  }
+}

@@ -35,6 +35,10 @@ nav{
     width: 160px;
     display: flex;
     text-align: center;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 35px;
+    margin-right: 10px;
+}
+.nav__score--text{
+    margin-right: 20px;
 }

@@ -12,8 +12,8 @@
     display: none;
 }
 .win-modal{
-    width: 90%;
-    height: 500px;
+    width: 400px;
+    height: auto;
     border-radius: 10px;
     padding: 20px;
     background-color: floralwhite;
@@ -61,4 +61,15 @@
 .small-text{
     margin: 5px 0;
     font-size: 12px;
+}
+@media screen and (max-width:768px){
+    .win-modal{
+        width: 90%;
+    }
+    .win-modal > img{
+        width: 100%;
+    }
+    .win-modal > input{
+        width: 80%;
+    }
 }
