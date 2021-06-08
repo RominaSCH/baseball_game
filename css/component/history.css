@@ -13,3 +13,8 @@ th, td{
     height: 40px;
     vertical-align: middle;
 }
+@media screen and (max-width:768px){
+    .history{
+        width: 90%;
+    }
+}

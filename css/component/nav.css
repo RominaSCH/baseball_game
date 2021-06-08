@@ -20,6 +20,8 @@ nav{
 }
 .nav__btns--back,
 .nav__btns--retry{
+    color: rgba(255,255,255,.6);
+    z-index: 3;
     transition: .2s ease-in-out;
 }
 .nav__btns--back:hover,

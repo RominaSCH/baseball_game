@@ -43,10 +43,18 @@
     color: #fff;
 }
 @media screen and (max-width:768px) {
+    .number__buttons{
+        height: 140px;
+    }
     .number__wrapper{
         flex-direction: column;
         height: 100%;
         width: 90%;
         margin-top: 80px;
+    }
+    .number__button{
+        width: 43px;
+        height: 43px;
+        margin: 6px;
     }
 }
