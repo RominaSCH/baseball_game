@@ -57,9 +57,22 @@
             </div>
         </div>
     </div>
-    <div class="history">
+    <table class="history">
         <!--js로 추가하는 history 칸-->
-    </div>
+
+        <tbody class="history_body">
+            <tr>
+                <th colspan="3">NUMBER</th>
+                <th>Strike Ball</th>
+                <th>OUT</th>
+            </tr>
+            <!-- <tr>
+                <td class="hiytory_number"></td>
+                <td class="history_sb"></td>
+                <td class="history_out"></td>
+            </tr> -->
+        </tbody>
+    </table>
 
     <div class="win-modal-overlay">
         <div class="win-modal"> <!--cat api로 사진을 넣어볼까...-->
@@ -75,6 +88,9 @@
         </div>
     </div>
     <script src="https://kit.fontawesome.com/6c2f90a09b.js" crossorigin="anonymous"></script>
+    <script>
+        const key = 4;
+    </script>
     <script src="js/normal.js"></script>
     <script src="js/numberBtn.js"></script>
 </body>

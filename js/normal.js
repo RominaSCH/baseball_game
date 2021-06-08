@@ -2,19 +2,36 @@ const tryBtn = document.querySelector(".try_btn");
 const inputValue = document.querySelector("#normal__number");
 
 let answerArray = [];
-let score = 40;
+let score;
 let tryTimes = 0;
 
-function init() {
+function init(key) {
     answerArray = numberMaker();
+    score = scoreReset(key);
 }
-init();
+init(key);
+
+function scoreReset(key){
+    if(key === 3){
+        inputValue.style.width = "200px";
+        return 20;
+    } else if(key === 4){
+        inputValue.style.width = "250px";
+        return 40;
+    } else if(key === 5){
+        inputValue.style.width = "300px";
+        return 60;
+    } else if(key === 6){
+        inputValue.style.width = "350px";
+        return 100;
+    }
+}
 
 function numberMaker() { //문제 숫자 배열 만들기
     let answerNum = [];
     let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     let maked = 0;
-    while (maked < 4) {
+    while (maked < key) {
         let randomNumber = Math.floor(Math.random() * (numbers.length));
         answerNum.push(numbers[randomNumber]);
         numbers.splice(randomNumber, 1);
@@ -28,7 +45,7 @@ tryBtn.addEventListener("click", (e) => { //맞춰보기 버튼 누를 때 발�
     e.preventDefault();
     const inputAnswer = [];
     const inputString = inputValue.value.split("");
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < key; i++) {
         inputAnswer.push(parseInt(inputString[i]));
     }
     compareNum(answerArray, inputAnswer);
@@ -44,9 +61,10 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
     const modal = document.querySelector(".win-modal-overlay");
 
     tryTimes += 1;
+    let out = false;
     let ball = 0;
     let strike = 0;
-    for (i = 0; i < 4; i++) { //strike, ball find
+    for (i = 0; i < key; i++) { //strike, ball find
         if (answer.includes(input[i])) {
             if (input[i] === answer[i]) {
                 strike += 1;
@@ -63,7 +81,9 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
             } else {
                 score -= 4;
             }
+            out = true;
             wrong();
+            outNumbers(input);
             resultSB.style.display = "none";
             resultOut.style.display = "block";
         } else { //0S 1~4B
@@ -86,10 +106,11 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
         resultSB.style.display = "flex";
         resultOut.style.display = "none";
     }
+    makeHistory(input,strike,ball,out);
     navScore.innerHTML = score;
     document.querySelector(".result__s--num").innerHTML = strike;
     document.querySelector(".result__b--num").innerHTML = ball;
-    if (strike === 4) {
+    if (strike === key) {
         if (tryTimes > 5) {
             score += 4;
             navScore.innerHTML = score;
@@ -121,3 +142,26 @@ document.querySelector(".delete_btn").addEventListener("click", (e) => {
     e.preventDefault();
     inputValue.value = "";
 });
+
+function makeHistory(inputNum, s, b, out){
+    const tableBody = document.querySelector(".history_body");
+    const tr = document.createElement("tr");
+    const tdNum = document.createElement("td");
+    const tdSB = document.createElement("td");
+    const tdOut = document.createElement("td");
+
+    tdNum.setAttribute("colspan","3");
+    tdNum.innerHTML = inputNum.join("");
+    tdSB.innerHTML = `${s}S ${b}B`;
+    if(out){
+        tdSB.innerHTML = "";
+        tdOut.innerHTML = "out";
+    } else{
+        tdSB.innerHTML = `${s}S ${b}B`;
+        tdOut.innerHTML = "";
+    }
+    tr.appendChild(tdNum);
+    tr.appendChild(tdSB);
+    tr.appendChild(tdOut);
+    tableBody.appendChild(tr);
+}

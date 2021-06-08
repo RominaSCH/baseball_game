@@ -8,54 +8,55 @@ const btn6 = document.querySelector(".btn6");
 const btn7 = document.querySelector(".btn7");
 const btn8 = document.querySelector(".btn8");
 const btn9 = document.querySelector(".btn9");
-
+//한계없이 써지는 문제를 easy, normal, hard, extreme 마다 다르게.
+//변수명은 같게, 변수값은 다르게
 btn0.addEventListener("click", ()=> {
-    if(inputValue.value.length < 3){
+    if(inputValue.value.length < key){
         inputValue.value += inputValue.innerHTML + "0";
     }
 })
 btn1.addEventListener("click", ()=> {
-    if(inputValue.value.length < 3){
+    if(inputValue.value.length < key){
         inputValue.value += inputValue.innerHTML + "1";
     }
 })
 btn2.addEventListener("click", ()=> {
-    if(inputValue.value.length < 3){
+    if(inputValue.value.length < key){
         inputValue.value += inputValue.innerHTML + "2";
     }
 })
 btn3.addEventListener("click", ()=> {
-    if(inputValue.value.length < 3){
+    if(inputValue.value.length < key){
         inputValue.value += inputValue.innerHTML + "3";
     }
 })
 btn4.addEventListener("click", ()=> {
-    if(inputValue.value.length < 3){
+    if(inputValue.value.length < key){
         inputValue.value += inputValue.innerHTML + "4";
     }
 })
 btn5.addEventListener("click", ()=> {
-    if(inputValue.value.length < 3){
+    if(inputValue.value.length < key){
         inputValue.value += inputValue.innerHTML + "5";
     }
 })
 btn6.addEventListener("click", ()=> {
-    if(inputValue.value.length < 3){
+    if(inputValue.value.length < key){
         inputValue.value += inputValue.innerHTML + "6";
     }
 })
 btn7.addEventListener("click", ()=> {
-    if(inputValue.value.length < 3){
+    if(inputValue.value.length < key){
         inputValue.value += inputValue.innerHTML + "7";
     }
 })
 btn8.addEventListener("click", ()=> {
-    if(inputValue.value.length < 3){
+    if(inputValue.value.length < key){
         inputValue.value += inputValue.innerHTML + "8";
     }
 })
 btn9.addEventListener("click", ()=> {
-    if(inputValue.value.length < 3){
+    if(inputValue.value.length < key){
         inputValue.value += inputValue.innerHTML + "9";
     }
 })

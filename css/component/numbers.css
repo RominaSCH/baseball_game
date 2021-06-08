@@ -46,7 +46,7 @@
     .number__wrapper{
         flex-direction: column;
         height: 100%;
-        width: 450px;
+        width: 90%;
         margin-top: 80px;
     }
 }
