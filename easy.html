@@ -73,9 +73,10 @@
             <h1>축하합니다! <br/>당신이 이겼습니다!</h1>
             <h3>당신의 점수는 <span class="win-modal__score"></span>점 입니다.</h3>
             <p>당신의 점수를 기록하시겠습니까?</p>
-            <input type="text" minlength="1" maxlength="10" placeholder="NAME" />
+            <p class="small-text">이름을 기입한 후 아무 버튼이나 누르세요</p>
+            <input id="winRecord" type="text" minlength="1" maxlength="10" placeholder="NAME" />
             <div class="win-modal__btns">
-                <a href="index.html" class="gohome">다른 난이도 선택하기</a href="index.html">
+                <button onclick="window.history.back()" class="gohome">다른 난이도 선택하기</button>
                 <button onclick="window.location.reload()" class="retry-btn">다시 하기</button>
             </div>
         </div>

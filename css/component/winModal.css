@@ -32,6 +32,7 @@
     margin: 7px 0;
 }
 .win-modal > input{
+    width: 80%;
     margin: 7px;
     text-align: center;
     border:0;
@@ -56,4 +57,8 @@
 .retry-btn:hover,
 .retry-btn:active{
     background-color: slateblue;
+}
+.small-text{
+    margin: 5px 0;
+    font-size: 12px;
 }

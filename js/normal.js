@@ -107,34 +107,27 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
             resultOut.style.display = "none";
         }
     } else { //1~4S 1~4B
-        if (tryTimes < 6) {
-            score -= minus;
-        } else {
-            score -= minusMore;
+        if(strike === key){
+            inputValue.style.background = "var(--basic-color)";
+            navScore.innerHTML = score;
+            console.log("WIN!!!");
+            modalScore.innerHTML = score;
+            modal.style.display = "flex";
+        } else{
+            if (tryTimes < 6) {
+                score -= minus;
+            } else {
+                score -= minusMore;
+            }
+            wrong();
+            resultSB.style.display = "flex";
+            resultOut.style.display = "none";
         }
-        wrong();
-        resultSB.style.display = "flex";
-        resultOut.style.display = "none";
     }
     makeHistory(input,strike,ball,out);
     navScore.innerHTML = score;
     document.querySelector(".result__s--num").innerHTML = strike;
     document.querySelector(".result__b--num").innerHTML = ball;
-    if (strike === key) {
-        if (tryTimes > 5) {
-            score += minusMore;
-            navScore.innerHTML = score;
-            console.log("WIN!!!");
-            modalScore.innerHTML = score;
-            modal.style.display = "flex";
-        } else {
-            score += minus;
-            navScore.innerHTML = score;
-            console.log("WIN!!!");
-            modalScore.innerHTML = score;
-            modal.style.display = "flex";
-        }
-    }
 }
 
 function wrong() {
