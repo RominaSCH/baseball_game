@@ -4,6 +4,8 @@ const inputValue = document.querySelector("#normal__number");
 let answerArray = [];
 let score;
 let tryTimes = 0;
+let minus;
+let minusMore;
 
 function init(key) {
     answerArray = numberMaker();
@@ -14,15 +16,23 @@ init(key);
 function scoreReset(key){
     if(key === 3){
         inputValue.style.width = "200px";
+        minus = 1;
+        minusMore = 2;
         return 20;
     } else if(key === 4){
         inputValue.style.width = "250px";
+        minus = 2;
+        minusMore = 3;
         return 40;
     } else if(key === 5){
         inputValue.style.width = "300px";
+        minus = 4;
+        minusMore = 6;
         return 60;
     } else if(key === 6){
         inputValue.style.width = "350px";
+        minus = 5;
+        minusMore = 8;
         return 100;
     }
 }
@@ -59,7 +69,7 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
     const resultOut = document.querySelector(".result__out");
     const modalScore = document.querySelector(".win-modal__score");
     const modal = document.querySelector(".win-modal-overlay");
-
+    navScore.innerHTML = score;
     tryTimes += 1;
     let out = false;
     let ball = 0;
@@ -76,10 +86,10 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
 
     if (strike === 0) {
         if (ball === 0) { //out!
-            if (tryTimes < 5) {
-                score -= 2;
+            if (tryTimes < 6) {
+                score -= minus;
             } else {
-                score -= 4;
+                score -= minusMore;
             }
             out = true;
             wrong();
@@ -87,20 +97,20 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
             resultSB.style.display = "none";
             resultOut.style.display = "block";
         } else { //0S 1~4B
-            if (tryTimes < 5) {
-                score -= 2;
+            if (tryTimes < 6) {
+                score -= minus;
             } else {
-                score -= 4;
+                score -= minusMore;
             }
             wrong();
             resultSB.style.display = "flex";
             resultOut.style.display = "none";
         }
     } else { //1~4S 1~4B
-        if (tryTimes < 5) {
-            score -= 2;
+        if (tryTimes < 6) {
+            score -= minus;
         } else {
-            score -= 4;
+            score -= minusMore;
         }
         wrong();
         resultSB.style.display = "flex";
@@ -112,13 +122,13 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
     document.querySelector(".result__b--num").innerHTML = ball;
     if (strike === key) {
         if (tryTimes > 5) {
-            score += 4;
+            score += minusMore;
             navScore.innerHTML = score;
             console.log("WIN!!!");
             modalScore.innerHTML = score;
             modal.style.display = "flex";
         } else {
-            score += 2;
+            score += minus;
             navScore.innerHTML = score;
             console.log("WIN!!!");
             modalScore.innerHTML = score;
