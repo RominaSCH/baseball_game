@@ -6,7 +6,6 @@ const rightBtn = document.querySelector(".modal_right");
 const closeBtn = document.querySelector(".modal_close");
 const explainBtn = document.querySelector(".explain-btn");
 const modalDisplay = document.querySelector(".explain__modal-overlay");
-
 let page = 1;
 
 explainBtn.addEventListener("click", ()=> {

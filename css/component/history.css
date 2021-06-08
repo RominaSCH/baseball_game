@@ -5,6 +5,8 @@
     margin-right: auto;
     border-collapse: collapse;
     font-size: 24px;
+    background-color: #fff;
+    text-align: center;
 }
 th{
     border-bottom: 1px solid rgba(0,0,0,.4);
