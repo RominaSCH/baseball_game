@@ -128,6 +128,7 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
     navScore.innerHTML = score;
     document.querySelector(".result__s--num").innerHTML = strike;
     document.querySelector(".result__b--num").innerHTML = ball;
+
 }
 
 function wrong() {
@@ -138,6 +139,7 @@ function wrong() {
         inputValue.style.background = "#fff";
         inputValue.style.color = "#000";
         inputValue.style.animation = "none";
+        inputValue.value = "";
     }, 1500);
 }
 
