@@ -132,7 +132,7 @@ function wrong() {
     inputValue.style.color = "#fff";
     inputValue.style.animation = "shake 1s ease-in-out";
     setTimeout(() => {
-        inputValue.style.background = "var(--basic-color)";
+        inputValue.style.background = "#fff";
         inputValue.style.color = "#000";
         inputValue.style.animation = "none";
     }, 1500);

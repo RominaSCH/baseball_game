@@ -22,17 +22,60 @@
 }
 .explain-content{
     z-index: 1;
-    position: relative;
+    position: absolute;
+    top: 10px;
+    left: 10px;
     width: 360px;
     height: 360px;
     background-color: var(--basic-color);
     border-radius: 10px;
     padding:20px;
-    float: right
+    font-size: 20px;
 }
 .modal_btn{
     border:0;
     outline: 0;
     cursor: pointer;
+    color: #fff;
+    font-size: 50px;
+}
+.second{
+    display: none;
+}
+.third{
+    display: none;
+}
+.explain__modal_btns{
+    position: relative;
+}
+.modal_btn{
+    position: absolute;
+    z-index: 3;color: rgba(255,255,255,.5);
+}
+.modal_left{
+    top: -20px;
+    left: -400px;
+    transition: .2s ease-in-out;
+}
+.modal_right{
+    top: -20px;
+    left: 25px;
+    transition: .2s ease-in-out;
+}
+.modal_close{
+    bottom: 175px;
+    left: -190px;
+    transition: .2s ease-in-out;
+}
+.modal_left:hover,
+.modal_left:active{
+    color: #fff;
+}
+.modal_right:hover,
+.modal_right:active{
+    color: #fff;
+}
+.modal_close:hover,
+.modal_close:active{
     color: #fff;
 }

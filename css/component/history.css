@@ -6,11 +6,8 @@
     border-collapse: collapse;
     font-size: 24px;
 }
-.history_body{
-    padding: 10px;
-}
 th{
-    border-bottom: 1px solid rgba(0,0,0,.5);
+    border-bottom: 1px solid rgba(0,0,0,.4);
 }
 th, td{
     height: 40px;

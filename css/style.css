@@ -1,5 +1,5 @@
 @import "variables.css";
- 
+
 @import "component/footer.css";
 @import "component/score.css";
 @import "component/explain.css";
@@ -13,59 +13,81 @@
 @import "screen/normal.css";
 
 @font-face {
-    font-family: "nanumroundR";
-    src: url(font/NanumSquareRoundR.ttf);
+  font-family: "nanumroundR";
+  src: url(font/NanumSquareRoundR.ttf);
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: nanumroundR;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: nanumroundR;
 }
-body{
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--basic-color);
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--basic-color);
 }
-.btn{
-    outline: 0;
-    border:0;
-    padding: 8px 13px;
-    border-radius: 5px;
-    cursor: pointer;
+.btn {
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.font-center{
-    text-align: center;
+.font-center {
+  text-align: center;
 }
-a, a:visited{
-    text-decoration: none;
+a,
+a:visited {
+  text-decoration: none;
 }
 @keyframes shake {
-    0%,
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+@keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
     100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    10%,
-    30%,
-    50%,
-    70% {
-      -webkit-transform: translateX(-10px);
-              transform: translateX(-10px);
-    }
-    20%,
-    40%,
-    60% {
-      -webkit-transform: translateX(10px);
-              transform: translateX(10px);
-    }
-    80% {
-      -webkit-transform: translateX(8px);
-              transform: translateX(8px);
-    }
-    90% {
-      -webkit-transform: translateX(-8px);
-              transform: translateX(-8px);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
     }
   }
-  
