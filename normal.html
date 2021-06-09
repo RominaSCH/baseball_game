@@ -76,12 +76,19 @@
             <h3>Your score is <span class="win-modal__score"></span></h3>
             <p>Do you want to record <br>your score and name?</p>
             <!-- <p class="small-text">Write your name and select button</p> -->
-            <input id="winRecord" type="text" minlength="1" maxlength="10" placeholder="NAME" />
+            <div class="record-box">
+                <input id="winRecord" type="text" minlength="1" maxlength="10" placeholder="NAME" />
+                <button onclick="record()" class="record-btn"><i class="fas fa-check"></i></button>
+            </div>
+            
             <div class="win-modal__btns">
-                <button onclick="save()" class="gohome">HOME</button>
-                <button onclick="save()" class="retry-btn">RETRY</button>
+                <button onclick="window.history.back()" class="gohome">HOME</button>
+                <button onclick="window.location.reload()" class="retry-btn">RETRY</button>
             </div>
         </div>
+    </div>
+    <div class="loading-overlay">
+        <div id="loading"></div>
     </div>
     <script src="https://kit.fontawesome.com/6c2f90a09b.js" crossorigin="anonymous"></script>
     <script>
@@ -90,10 +97,8 @@
     <script src="js/game.js"></script>
     <script src="js/numberBtn.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
-
 
     <script src="js/fireb.js"></script>
 </body>

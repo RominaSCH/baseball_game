@@ -1,55 +1,30 @@
 //configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyBEcrMGquOn7DZRAiOaV_0HTg2A10qgwzw",
-    authDomain: "baseball-game-romina.firebaseapp.com",
-    projectId: "baseball-game-romina",
-    storageBucket: "baseball-game-romina.appspot.com",
-    messagingSenderId: "399768318470",
-    appId: "1:399768318470:web:bab1fad8dd7199a97d4987"
-};
+    apiKey: "AIzaSyC2jlTyrBtyHCeq93h0hdQXJBTVv4WRqHs",
+    authDomain: "baseball-1f42a.firebaseapp.com",
+    projectId: "baseball-1f42a",
+    storageBucket: "baseball-1f42a.appspot.com",
+    messagingSenderId: "414374208160",
+    appId: "1:414374208160:web:2216813ba4c9759faadfc5"
+  };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
 
-//Ready Data
-// function Ready() {
-//     var nameF = document.querySelector("#winRecord").value;
-//     var scoreF = score;
-//     var level = key;
-//     return nameF, scoreF, level;
-// }
-//Insert Process
-function save(){
-    var nameF = document.querySelector("#winRecord").value;
+function record(){
+    const loading = document.querySelector(".loading-overlay");
+    var winRecord = document.getElementById("winRecord").value;
     var scoreF = score;
     var level = key;
-    database.ref("users/"+nameF).set({
-        userName : nameF,
+    database.ref("user/"+winRecord).set({
+        userName : winRecord,
         score : scoreF,
-        level : key
+        level : level
     });
+    loading.style.display = "flex";
+    setTimeout(() => {
+        document.querySelector(".record-btn").style.display = "none";
+        loading.style.display = "none";
+    }, 1000);
 }
-document.querySelector(".gohome").addEventListener("click", ()=>{
-    var nameF = document.querySelector("#winRecord").value;
-    var scoreF = score;
-    var level = key;
-    database.ref("users/"+nameF).set({
-        userName : nameF,
-        score : scoreF,
-        level : key
-    });
-    window.history.back();
-})
-document.querySelector(".retry-btn").addEventListener("click", ()=>{
-    var nameF = document.querySelector("#winRecord").value;
-    var scoreF = score;
-    var level = key;
-    const db = getDatabase();
-    set(ref(db, "users/"+userId), {
-        userName : nameF,
-        score : scoreF,
-        level : key
-    });
-    window.location.reload();
-})

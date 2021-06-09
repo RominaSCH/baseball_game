@@ -8,6 +8,7 @@
 @import "component/winModal.css";
 @import "component/numbers.css";
 @import "component/history.css";
+@import "component/loading.css";
 
 @import "screen/home.css";
 @import "screen/normal.css";
@@ -89,6 +90,6 @@ a:visited {
 }
 @media screen and (max-width: 768px) {
   body {
-    height: 200vh;
+    height: 240vh;
   }
 }

@@ -43,15 +43,38 @@
 .small-text{
     font-size: 10px;
 }
-.win-modal > input{
-    width: 80%;
+.record-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.record-btn{
+    border:0;
+    outline: 0;
+    padding: 8px 11px;
+    font-size: 12px;
+    border-radius: 25px;
+    transition: .1s ease-in-out;
+    background-color: var(--couple-color);
+    color: #fff;
+}
+.record-btn:hover,
+.record-btn:active{
+    background-color: deeppink;
+    color: #fff;
+}
+.win-modal input{
+    width: 70%;
     margin: 7px;
     text-align: center;
     border:0;
     outline: 0;
     background-color: #fff;
-    font-size: 24px;
+    font-size: 22px;
     font-family: 'Quantico', sans-serif;
+    border-radius: 5px;
 }
 .gohome,
 .gohome:visited,
