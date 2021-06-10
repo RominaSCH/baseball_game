@@ -1,33 +1,40 @@
-//configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyC2jlTyrBtyHCeq93h0hdQXJBTVv4WRqHs",
-    authDomain: "baseball-1f42a.firebaseapp.com",
-    projectId: "baseball-1f42a",
-    storageBucket: "baseball-1f42a.appspot.com",
-    messagingSenderId: "414374208160",
-    appId: "1:414374208160:web:2216813ba4c9759faadfc5"
-  };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// //configuration
+// var firebaseConfig = {
+//     apiKey: "AIzaSyC2jlTyrBtyHCeq93h0hdQXJBTVv4WRqHs",
+//     authDomain: "baseball-1f42a.firebaseapp.com",
+//     projectId: "baseball-1f42a",
+//     storageBucket: "baseball-1f42a.appspot.com",
+//     messagingSenderId: "414374208160",
+//     appId: "1:414374208160:web:2216813ba4c9759faadfc5"
+//   };
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
 
-var database = firebase.database();
+// var database = firebase.database();
 
-function record(){
-    const loading = document.querySelector(".loading-overlay");
-    var winRecord = document.getElementById("winRecord").value;
-    var scoreF = score;
-    var level = key;
-    database.ref("user/"+winRecord).set({
-        userName : winRecord,
-        score : scoreF,
-        level : level
-    });
-    loading.style.display = "flex";
-    setTimeout(() => {
-        document.querySelector(".record-btn").style.display = "none";
-        loading.style.display = "none";
-    }, 1000);
-}
+// function record(){
+    
+//     var winRecord = document.getElementById("winRecord").value;
+//     db.collection("score").insertOne({_id: winRecord, userName : winRecord, score: score, level : key}, (error, result) => {
+//         console.log('saved');
+//     });
+// }
+
+
+    // const loading = document.querySelector(".loading-overlay");
+    // var winRecord = document.getElementById("winRecord").value;
+    // var scoreF = score;
+    // var level = key;
+    // database.ref("user/"+winRecord).set({
+    //     userName : winRecord,
+    //     score : scoreF,
+    //     level : level
+    // });
+    // loading.style.display = "flex";
+    // setTimeout(() => {
+    //     document.querySelector(".record-btn").style.display = "none";
+    //     loading.style.display = "none";
+    // }, 1000);
 // function ranking(){ 걍 mongoDB받아서 써보자...후...
 //     const tableBody = document.querySelector(".main__score-body");
 //     const tr = document.createElement("tr");
