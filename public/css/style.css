@@ -12,6 +12,7 @@
 
 @import "screen/home.css";
 @import "screen/normal.css";
+@import "screen/rank.css";
 
 *{
   font-family: 'Quantico', sans-serif;
@@ -88,8 +89,8 @@ a:visited {
     opacity: 1;
   }
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   body {
     height: 240vh;
   }
-}
+} */

@@ -1,0 +1,51 @@
+#rank__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rank__home{
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    transition: .2s ease-in-out;
+    margin-bottom: 50px;
+}
+.rank__home:hover,
+.rank__home:active{
+    color: crimson;
+}
+.main__gamescores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 20px;
+}
+.main__table{
+    background-color: #fff;
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+.main__table td{
+    text-align: center;
+    height: 40px;
+}
+.ranking__btn, .ranking__btn:visited{
+    margin-top: 30px;
+    color: #fff;
+    font-size: 80px;
+    transition: .2s ease-in-out;
+}
+.ranking__btn:hover,
+.ranking__btn:active{
+    color: crimson;
+}
+@media screen and (max-width:768px){
+    .main__table{
+        width: 90%;
+    }
+}

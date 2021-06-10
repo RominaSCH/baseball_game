@@ -10,6 +10,7 @@ let minusMore;
 function init(key) {
     answerArray = numberMaker();
     score = scoreReset(key);
+    document.querySelector("#key").value = key;
 }
 init(key);
 
@@ -108,6 +109,7 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
         }
     } else { //1~4S 1~4B
         if(strike === key){
+            document.querySelector("#score").value = score;
             inputValue.style.background = "var(--basic-color)";
             navScore.innerHTML = score;
             console.log("WIN!!!");
@@ -128,7 +130,7 @@ function compareNum(answer, input) { //답이랑 input값이랑 비교하는 함
     navScore.innerHTML = score;
     document.querySelector(".result__s--num").innerHTML = strike;
     document.querySelector(".result__b--num").innerHTML = ball;
-
+    document.querySelector("#score").value = score;
 }
 
 function wrong() {
@@ -170,24 +172,4 @@ function makeHistory(inputNum, s, b, out){
     tr.appendChild(tdOut);
     tableBody.appendChild(tr);
 }
-// const express  = require("express");
-// const app = express();
-// app.use(express.urlencoded({extended: true}))
-// const MongoClient = require("mongodb").MongoClient;
 
-// var db;
-
-// function record(){
-//     var winRecord = document.getElementById("winRecord").value;
-//     db.collection("score").insertOne({_id: winRecord, userName : winRecord, score: score, level : key}, (error, result) => {
-//         console.log('saved');
-//     });
-//     MongoClient.connect("mongodb://cuqi213:dhktej31@cluster0-shard-00-00.n2tu4.mongodb.net:27017,cluster0-shard-00-01.n2tu4.mongodb.net:27017,cluster0-shard-00-02.n2tu4.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-9mw6x1-shard-0&authSource=admin&retryWrites=true&w=majority",{ useUnifiedTopology: true }, (error, client) => {
-//     //연결되면 할 일
-//     if(error){ return console.log(error)}
-//     db = client.db("baseball-game");
-//     db.collection("score").insertOne({_id: winRecord, userName : winRecord, score: score, level : key}, (error, result) => {
-//         console.log('saved');
-//     });
-// }) 
-// }
