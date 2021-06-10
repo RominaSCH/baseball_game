@@ -21,18 +21,19 @@
             <table class="main__table">
                 <tbody class="main__score-body">
                     <tr>
-                        <th>Rank</th>
-                        <th>Name</th>
-                        <th>Score</th>
+                        <th class="score-th">Rank</th>
+                        <th class="score-th">Name</th>
+                        <th class="score-th">Score</th>
                     </tr>
-                    <% for(var i = 0 ; i < 3; i++){ %>
+                    <% for(var i = 0 ; i < scores.length; i++){ %>
                         <tr>
-                            <td>1</td>
+                            <td><%= i+1 %></td>
                             <td><%= scores[i].userName %></td>
                             <td><%= scores[i].score %></td>
                         </tr>
                     <% } %>
-
+<!--이제 sort해서 내림차순으로 데이터 정리한다음 20위까지 표시하는거 남음-->
+<!-- 그리고 서버 구해서 내고...-->
                 </tbody>
             </table>
         </div>

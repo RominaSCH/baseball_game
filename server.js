@@ -52,16 +52,19 @@ app.get("/hard", function (request, respond) {
     respond.sendFile(__dirname + "/hard.html");
 })
 app.get("/extreme", function (request, respond) {
-    respond.sendFile(__dirname + "/normal.html");
+    respond.sendFile(__dirname + "/extreme.html");
 })
 app.get("/rank", function(req, res){
     MongoClient.connect(mongoURL,{ useUnifiedTopology: true }, (error, client) => {
         if(error){ return console.log(error);}
         // console.log(req.body);
         db = client.db("baseball-game");
+        // db.collection("score").find().sort({"score":-1}, (err, rest) => {
+        //     console.log(rest);
+        // });
         db.collection("score").find().toArray((err, result) => {//db에서 자료찾기
-        // console.log(result);
-        res.render("rank.ejs", {scores : result});//찾은 자료 ejs 에 넣어주세요
+            // console.log(result);
+            res.render("rank.ejs", {scores : result});//찾은 자료 ejs 에 넣어주세요
         });
     });
     // res.render("list.ejs", {scores : result});
