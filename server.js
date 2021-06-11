@@ -5,6 +5,7 @@ const MongoClient = require("mongodb").MongoClient;
 var db;
 mongoURL = "mongodb://cuqi213:dhktej31@cluster0-shard-00-00.n2tu4.mongodb.net:27017,cluster0-shard-00-01.n2tu4.mongodb.net:27017,cluster0-shard-00-02.n2tu4.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-9mw6x1-shard-0&authSource=admin&retryWrites=true&w=majority";
 app.set("view engine", "ejs");
+const port = process.env.PORT;
 //------------------------apple code---------------------
 
 // MongoClient.connect(mongoURL,{ useUnifiedTopology: true }, (error, client) => {
@@ -48,8 +49,8 @@ app.post("/add", (req, res) => {
     });
 });//와씨바 하루종일 걸리네... 이걸 이해못해? 멍청이야!?
 
-app.listen(8080, function(){
-    console.log("listening on 8080");
+app.listen(port, function(){
+    console.log(`Server is listening on ${port}`);
 });//서버를 위한 기본문법 3줄
 //.listen(서버띄울 포트번호, 띄운 후 실행할 코드)
 
