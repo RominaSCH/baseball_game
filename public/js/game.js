@@ -48,7 +48,7 @@ function numberMaker() { //문제 숫자 배열 만들기
         numbers.splice(randomNumber, 1);
         maked += 1;
     }
-    console.log(answerNum);
+    // console.log(answerNum);
     return answerNum;
 }
 
