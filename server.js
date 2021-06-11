@@ -20,14 +20,29 @@ app.set("view engine", "ejs");
 //     });
 // });
 //------------------------------------------------------
+// const loading = document.querySelector(".loading-overlay");
+    // var winRecord = document.getElementById("winRecord").value;
+    // var scoreF = score;
+    // var level = key;
+    // database.ref("user/"+winRecord).set({
+    //     userName : winRecord,
+    //     score : scoreF,
+    //     level : level
+    // });
+    // loading.style.display = "flex";
+    // setTimeout(() => {
+    //     document.querySelector(".record-btn").style.display = "none";
+    //     loading.style.display = "none";
+    // }, 1000);
 
 app.post("/add", (req, res) => {
     MongoClient.connect(mongoURL,{ useUnifiedTopology: true }, (error, client) => {
         if(error){ return console.log(error);}
         // console.log(req.body);
         db = client.db("baseball-game");
-        db.collection("score").insertOne({_id:new Date(),userName : req.body.userName, score:req.body.score, level:req.body.key}, (Error, res) => {
+        db.collection("score").insertOne({_id:new Date(),userName : req.body.userName, score:parseInt(req.body.score), level:req.body.key}, (Error, res) => {
             console.log("saved");
+
         });
     
     });
@@ -62,8 +77,8 @@ app.get("/rank", function(req, res){
         // db.collection("score").find().sort({"score":-1}, (err, rest) => {
         //     console.log(rest);
         // });
-        db.collection("score").find().toArray((err, result) => {//db에서 자료찾기
-            // console.log(result);
+        db.collection("score").find().sort({"score": -1}).toArray((err, result) => {//db에서 자료찾기
+            console.log(result);
             res.render("rank.ejs", {scores : result});//찾은 자료 ejs 에 넣어주세요
         });
     });

@@ -173,3 +173,11 @@ function makeHistory(inputNum, s, b, out){
     tableBody.appendChild(tr);
 }
 
+function clicked(){
+    const loading = document.querySelector(".loading-overlay");
+    loading.style.display = "flex";
+            setTimeout(() => {
+                document.querySelector(".record-btn").style.display = "none";
+                loading.style.display = "none";
+            }, 1000);
+}
