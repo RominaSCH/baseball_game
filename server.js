@@ -3,7 +3,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }))
 const MongoClient = require("mongodb").MongoClient;
 var db;
-mongoURL = "mongodb://cuqi213:dhktej31@cluster0-shard-00-00.n2tu4.mongodb.net:27017,cluster0-shard-00-01.n2tu4.mongodb.net:27017,cluster0-shard-00-02.n2tu4.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-9mw6x1-shard-0&authSource=admin&retryWrites=true&w=majority";
+mongoURL = "mongodb+srv://cuqi213:dhktej31@cluster0.n2tu4.mongodb.net/?retryWrites=true&w=majority";
+// mongoURL = "mongodb://cuqi213:dhktej31@cluster0-shard-00-00.n2tu4.mongodb.net:27017,cluster0-shard-00-01.n2tu4.mongodb.net:27017,cluster0-shard-00-02.n2tu4.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-9mw6x1-shard-0&authSource=admin&retryWrites=true&w=majority";
 app.set("view engine", "ejs");
 const port = process.env.PORT;
 //------------------------apple code---------------------
